@@ -3,5 +3,5 @@ module.exports = {
     '/question/': require('../question/sidebar'),
     // '/bd/': require('../bd/sidebar'),
     '/interesting/': require('../interesting/sidebar'),
-    // '/life/': require('../life/sidebar')
+    '/life/': require('../life/sidebar')
 }
