@@ -1,7 +1,6 @@
 module.exports = {
-    '/frame/': require('../frame/sidebar'),
+    '/FE/': require('../FE/sidebar'),
     '/question/': require('../question/sidebar'),
-    // '/bd/': require('../bd/sidebar'),
-    '/interesting/': require('../interesting/sidebar'),
-    '/life/': require('../life/sidebar')
+    '/life/': require('../life/sidebar'),
+    '/dog/': require('../dog/sidebar')
 }

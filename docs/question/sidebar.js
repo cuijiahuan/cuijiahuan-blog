@@ -1,9 +1,3 @@
 module.exports = [
-    {
-        title: '英雄联盟',
-        collapsable: true,
-        children: [
-            ['./lol/清华打野小兲', '清华打野小兲'],
-        ],
-    }
+    ['./为什么高铁作为没有E座.md', '为什么高铁作为没有E座?']
 ]
