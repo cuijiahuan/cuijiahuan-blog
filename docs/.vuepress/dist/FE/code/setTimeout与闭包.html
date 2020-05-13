@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>setTimeout与闭包 | AnYi&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="mask-icon" href="/logo.png" color="#3eaf7c">
+    <meta name="description" content="安艺的个人博客">
+    <meta http-quiv="pragma" cotent="no-cache">
+    <meta http-quiv="expires" cotent="0">
+    <meta http-quiv="pragma" cotent="no-cache, must-revalidate">
+    <link rel="preload" href="/assets/css/0.styles.25334014.css" as="style"><link rel="preload" href="/assets/js/app.94fb3527.js" as="script"><link rel="preload" href="/assets/js/2.1b6b649b.js" as="script"><link rel="preload" href="/assets/js/9.6e2cfacd.js" as="script"><link rel="prefetch" href="/assets/js/10.cf01bc22.js"><link rel="prefetch" href="/assets/js/11.c0ed243f.js"><link rel="prefetch" href="/assets/js/12.5a8eec4a.js"><link rel="prefetch" href="/assets/js/13.fe58c83d.js"><link rel="prefetch" href="/assets/js/14.30ac888f.js"><link rel="prefetch" href="/assets/js/15.c436ecbe.js"><link rel="prefetch" href="/assets/js/16.eee52395.js"><link rel="prefetch" href="/assets/js/17.f80a8a77.js"><link rel="prefetch" href="/assets/js/18.958a9362.js"><link rel="prefetch" href="/assets/js/19.3da30c55.js"><link rel="prefetch" href="/assets/js/20.52acf877.js"><link rel="prefetch" href="/assets/js/21.71c6a3d0.js"><link rel="prefetch" href="/assets/js/22.31ca88af.js"><link rel="prefetch" href="/assets/js/23.a655fc01.js"><link rel="prefetch" href="/assets/js/24.37a85591.js"><link rel="prefetch" href="/assets/js/25.a2dca6ca.js"><link rel="prefetch" href="/assets/js/26.90b9ba43.js"><link rel="prefetch" href="/assets/js/27.6b337ca1.js"><link rel="prefetch" href="/assets/js/28.93d27b40.js"><link rel="prefetch" href="/assets/js/29.3b8a981a.js"><link rel="prefetch" href="/assets/js/3.163b9c86.js"><link rel="prefetch" href="/assets/js/30.34f808f8.js"><link rel="prefetch" href="/assets/js/31.86181a03.js"><link rel="prefetch" href="/assets/js/32.a25a2a3d.js"><link rel="prefetch" href="/assets/js/4.1c936485.js"><link rel="prefetch" href="/assets/js/5.06a83b9c.js"><link rel="prefetch" href="/assets/js/6.46238745.js"><link rel="prefetch" href="/assets/js/7.0544107c.js"><link rel="prefetch" href="/assets/js/8.3635c927.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.25334014.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">AnYi's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/FE/" class="nav-link router-link-active">
+  前端
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  问题
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  生活
+</a></div><div class="nav-item"><a href="/dog/" class="nav-link">
+  单身狗勿进
+</a></div><div class="nav-item"><a href="https://github.com/cuijiahuan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/FE/" class="nav-link router-link-active">
+  前端
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  问题
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  生活
+</a></div><div class="nav-item"><a href="/dog/" class="nav-link">
+  单身狗勿进
+</a></div><div class="nav-item"><a href="https://github.com/cuijiahuan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>code</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FE/code/vue过滤器.html" class="sidebar-link">vue过滤器</a></li><li><a href="/FE/code/利用hover控制其他元素样式.html" class="sidebar-link">利用hover控制其他元素样式</a></li><li><a href="/FE/code/了解Vue-router.html" class="sidebar-link">了解Vue-router</a></li><li><a href="/FE/code/思考跨域问题.html" class="sidebar-link">思考跨域问题</a></li><li><a href="/FE/code/优雅降级与渐进增强.html" class="sidebar-link">优雅降级与渐进增强</a></li><li><a href="/FE/code/自适应布局的几种方法.html" class="sidebar-link">自适应布局的几种方法</a></li><li><a href="/FE/code/PWA了解.html" class="sidebar-link">PWA了解</a></li><li><a href="/FE/code/setTimeout与闭包.html" class="active sidebar-link">setTimeout与闭包</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/FE/code/vue问题总结.html" class="sidebar-link">vue问题总结</a></li><li><a href="/FE/code/vue中如何引入外链css和js.html" class="sidebar-link">vue中如何引入外链css和js</a></li><li><a href="/FE/code/Web安全攻击方式.html" class="sidebar-link">Web安全攻击方式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>tool</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>hybrid</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="分享总结"><a href="#分享总结" class="header-anchor">#</a> <center>分享总结</center></h3> <p>今天学姐给我们主要分享了关于setTimeout与闭包的问题，在这里我写一下自己的感受</p> <hr> <p>在这之前，我个人认为首先需要了解一下javascript的单线程和异步。</p> <p>作为一个脚本语言，javascript的主要用途是与用户互动，以及操作DOM，这决定了它只能是单线程，否则会带来很复杂的同步问题，所以也决定了它本身是不可能异步的。</p> <p>但是，我们通过某种方式又可以使得js具备异步属性，当网络请求、定时器和事件监听时，如果同步执行的话，效率会非常低，所以这时浏览器会开辟另外的线程，主要包括http请求线程，浏览器定时触发器，浏览器事件触发进程，这些都是异步的。</p> <p>那么问题来了，当异步任务都完成后，主线程又是如何知道的？答案是回调函数，整个程序是事件驱动的，每个事件都会绑定相应的回调函数，例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>setTimeout(function(){
+    console.log(time is out);
+},50);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>当执行这段函数时，浏览器异步执行计时操作，当50ms时，会触发定时事件，这个时候就会把回调函数放到任务队列里</p> <blockquote><p><strong>所以，js一直都是单线程的，浏览器实现异步</strong></p></blockquote> <hr> <p>下面我们主要来回顾一下学姐今天给我们讲的知识：</p> <p>1、setTimeout(f1,0)</p> <p>这个语句中的f1数是立刻执行的吗？并不一定，我们首先要知道主线程内的命令是否执行完，如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>setTimeout(function(){
+    console.log(1);
+},0)
+console.log(2);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>这段代码输出为2,1，因为执行setTimeout后，会立即把匿名函数放到任务队列里面等待主线程召唤，等到执行完console.log(2)之后，才会执行匿名函数，这里有人会问为什么要用setTimeout(f1,0)语句，首先我们要确认这个语句是具有意义的：如果f1很费时，那么我们需要先将它放到任务队列里面，等到主程序执行完之后再执行f1。</p> <p>2、setTimeout中的闭包</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>for(var i = 0; i &lt; 5; i++){
+    setTimeout(function(){
+        console.log(i);
+    },1000*i);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>结果：开始打印一个5，然后每隔一秒输出5，总共5个5</p> <p>解析：先执行setTimeout外面的函数，然后执行setTimeout里面的函数，这时因为for循环已经遍历完，所以i=5，接着执行console.log(i),执行5次，所以输出5个5</p> <p>那么如何得到0-4呢？</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>for(var i = 0;i &lt; 5; i++){
+    (function(i){
+        setTimeout(function(){
+            console.log(i);
+        },i*1000);
+    })(i);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>结果：每隔一秒输出，输出0-4</p> <p>解析：在这里我的理解是for循环遍历时，将每次i的值暂时存到(i)里面，然后当执行setTimeout时，通过function(i)将值引入进来，所以输出0-4</p> <p>删掉i时</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>for(var i = 0; i &lt; 5; i++){
+    (function(){
+        setTimeout(function(){
+            console.log(i);
+        },i*1000);
+    })(i);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>结果：5个5</p> <p>解析：个人感觉这样写和第一个语句一样，是通过同样的方式输出。</p> <p>变：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>for(var i = 0; i &lt; 5; i++){
+    setTimeout((function(i){
+        console.log(i);
+    })(i),i*1000);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>结果：立刻输出0-4</p> <p>解析：在这里我个人理解是先打印出0-4，但是先保存，最后一起输出</p> <p>最后一个</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>setTimeout(function() {
+  console.log(1)
+}, 0);
+new Promise(function executor(resolve) {
+  console.log(2);
+  for( var i=0 ; i&lt;10000 ; i++ ) {
+    i == 9999 &amp;&amp; resolve();
+  }
+  console.log(3);
+}).then(function() {
+  console.log(4);
+});
+console.log(5);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>答案是2 3 5 4 1</p> <p>对于第一个不输出1，我大概理解是它的执行时间是大于0小于1的，所以先执行下面的函数，最后执行setTimeout函数，所以最后打印1（看了mkicrotask和macrotask的区别后，我理解是console(1)会先存入macrotask中，当microtask任务执行完之后，最后执行macrotask任务）</p> <p>对于es6中的promise方法，这是一种异步解决方法，它有三种状态：pending(进行中)、Resolved(已经完成)和Rejected(已失败)，上面代码里是resolve，是异步操作成功，因此打印出2</p> <p>当i为9999且resolve()成立时，输出3</p> <p>promise生成之后，用then方法分别指定Resolved状态和Reject状态的回调函数因此打印4，这块我认为4在5后面的原因是console.log(4)在函数内，执行时会先存入任务队列，然后promise优先级高于setTimeout，所以先输出5，然后是4，最后是1（不知道理解的对不对）</p> <p>最后，学姐提到了macrotask与microtask,我查看了资料后，显示，它们两个相当于异步任务中不同的两个任务队列</p> <p>而它们的不同如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log(1);
+setTimeout(function(){
+    console.log(2);
+},0);
+Promise.resolve().then(function(){
+    console.log(3);
+}).then(function(){
+    console.log(4);
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>输出是1,3,4,2</p> <p>由上代码我们就可以看出来（学姐的最后一个代码块也可以看出），Promise的异步任务优先级高于setTimeout的延时为0的任务</p> <p>原因是Promise的then方法的函数会被存入microtasks队列，而setTimeout函数会被存入marcotasks中</p> <p>在任务队列中，每一次事件循环，macrotask只会提取一个执行，而microtask会一直提取，直到microtask队列为空，也就是说如果某个microtask推入到执行中，那么当主线程任务完成之后，会循环调用该队列的下一个任务，直到全部完成，而事件循环每次只会引入一个macrotask，执行完之后主线程又会检查microtask队列，完成所有之后再执行macrotask任务</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/FE/code/PWA了解.html" class="prev">
+        PWA了解
+      </a></span> <span class="next"><a href="/FE/code/vue问题总结.html">
+        vue问题总结
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.94fb3527.js" defer></script><script src="/assets/js/2.1b6b649b.js" defer></script><script src="/assets/js/9.6e2cfacd.js" defer></script>
+  </body>
+</html>
