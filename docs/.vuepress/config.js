@@ -1,6 +1,6 @@
 module.exports = {
     title: 'AnYi\'s blog',
-    description: '安艺的个人博客',
+    description: '的个人博客',
     head: [ // 注入到当前页面的 HTML <head> 中的标签
         // ['link', { rel: 'icon', href: '/logo.png' }], // 增加一个自定义的 favicon(网页标签的图标)
         // ['link', { rel: 'manifest', href: '/logo.png' }],
