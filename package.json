@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/cuijiahuan/cuijiahuan-blog/issues"
   },
-  "homepage": "https://github.com/cuijiahuan/cuijiahuan-blog#readme"
+  "homepage": "https://github.com/cuijiahuan/cuijiahuan-blog#readme",
+  "devDependencies": {
+    "vuepress-theme-reco": "^1.5.5"
+  }
 }
