@@ -1,7 +1,7 @@
 const themeConfig = require('./config/theme/')
 
 module.exports = {
-  title: "小鱼的博客",
+  title: "恰饭の辅助",
   description: '朝暮与年岁并往，与你一起共至光年',
   dest: 'public',
   head: [
