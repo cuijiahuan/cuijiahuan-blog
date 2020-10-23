@@ -14,7 +14,7 @@ module.exports = {
   // 最后更新时间
   lastUpdated: 'Last Updated', // string | boolean
   // 作者
-  author: '恰饭の辅助',
+  author: '白银二辅助',
   // 备案号
   record: '',
   // 项目开始时间
