@@ -6,4 +6,4 @@ git add .
 git commit -m 'deploy'
 
 :: 推到仓库的 master 分支
-git push -f https://github.com/cuijiahuan/cuijiahuan.github.io master
+git push https://github.com/cuijiahuan/cuijiahuan.github.io master
