@@ -14,7 +14,7 @@ module.exports = {
   // 最后更新时间
   lastUpdated: 'Last Updated', // string | boolean
   // 作者
-  author: '白银二辅助',
+  author: '柚子讴歌',
   // 备案号
   record: '',
   // 项目开始时间

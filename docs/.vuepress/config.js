@@ -1,8 +1,8 @@
 const themeConfig = require('./config/theme/')
 
 module.exports = {
-  title: "白银二辅助",
-  description: '我曾相信科学，现在相信管理学',
+  title: "柚子讴歌",
+  description: 'just do',
   dest: 'public',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
