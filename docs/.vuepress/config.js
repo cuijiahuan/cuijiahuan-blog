@@ -1,8 +1,8 @@
 const themeConfig = require('./config/theme/')
 
 module.exports = {
-  title: "柚子讴歌",
-  description: 'just do',
+  title: "柚宝",
+  description: '木由',
   dest: 'public',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],

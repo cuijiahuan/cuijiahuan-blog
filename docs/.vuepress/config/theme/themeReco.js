@@ -14,7 +14,7 @@ module.exports = {
   // 最后更新时间
   lastUpdated: 'Last Updated', // string | boolean
   // 作者
-  author: '柚子讴歌',
+  author: '柚宝',
   authorAvatar: '/head.png',
   // 备案号
   record: '',
