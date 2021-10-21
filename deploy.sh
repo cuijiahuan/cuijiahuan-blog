@@ -1,3 +1,8 @@
+# 保存blog下的修改
+git add .
+git commit -m '保存修改内容'
+git push
+
 # 打包文件
 npm run build
 
@@ -15,12 +20,4 @@ mv /Users/cuijiahuan/Desktop/cuijiahuan-blog/public/* /Users/cuijiahuan/Desktop/
 # 进行发布
 git add .
 git commit -m '更新发布'
-git push
-
-# 保存cuijiahuan-blog下的修改
-cd cd /Users/cuijiahuan/Desktop/cuijiahuan-blog
-
-# 进行发布
-git add .
-git commit -m '保存更新'
 git push
