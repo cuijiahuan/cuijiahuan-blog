@@ -1,8 +1,7 @@
 ---
 home: true
-bgImage: 'https://photo.smallsunnyfox.com/images/blog/bg.png'
+bgImage: '/banner.jpg'
 bgImageStyle: {
-  height: '400px'
 }
-isShowTitleInHome: false
+isShowTitleInHome: true
 ---
