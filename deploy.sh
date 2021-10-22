@@ -21,3 +21,9 @@ mv /Users/cuijiahuan/Desktop/cuijiahuan-blog/blog/* /Users/cuijiahuan/Desktop/cu
 git add .
 git commit -m '更新发布'
 git push
+
+# 切换到cuijiahuan.github.io文件夹
+cd /Users/cuijiahuan/Desktop/cuijiahuan-blog
+
+# 删除打包文件
+rm -rf blog
