@@ -8,17 +8,16 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "vuepress dev docs",
+    "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "deploy.bat"
   },
   "dependencies": {
     "vuepress": "1.0.3",
-    "@vuepress/plugin-medium-zoom": "1.0.0-alpha.0",
-    "vuepress-plugin-flowchart": "1.4.3",
     "@vuepress/plugin-pwa": "1.0.0-alpha.3"
   },
   "devDependencies": {
-    "vuepress-theme-reco": "^1.0.8-alpha.3"
+    "vuepress-theme-reco": "^1.0.8-alpha.3",
+    "vuepress-plugin-dynamic-title": "^1.0.0"
   }
 }
