@@ -9,15 +9,7 @@ module.exports = {
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco',
-  themeConfig: {
-    mode: 'dark',
-    modePicker: true,
-    valineConfig: {
-      appId: 'zjR4dMTpvo0zEJOnkSqXinYX-gzGzoHsz',
-      appKey: 'cXH8sBPviOXPfM7VGiQYeMxY',
-    }
-
-  },
+  themeConfig,
   markdown: {
     lineNumbers: true
   },
