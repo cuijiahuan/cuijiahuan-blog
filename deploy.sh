@@ -15,7 +15,7 @@ rm -rf assets category img tag timeline views
 rm -f 404.html index.html banner.jpg head.jpg head.png favicon.ico
 
 # 将打包的public文件夹拷贝到cuijiahuan.github.io文件夹中
-mv /Users/cuijiahuan/Desktop/cuijiahuan-blog/public/* /Users/cuijiahuan/Desktop/cuijiahuan.github.io
+mv /Users/cuijiahuan/Desktop/cuijiahuan-blog/blog/* /Users/cuijiahuan/Desktop/cuijiahuan.github.io
 
 # 进行发布
 git add .
