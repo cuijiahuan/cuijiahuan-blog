@@ -1,6 +1,6 @@
 # 保存blog下的修改
 git add .
-git commit -m '保存修改内容'
+git commit -m '更新blog'
 git push
 
 # 打包文件
